@@ -11,17 +11,22 @@ The button is attached to a GPIO pin and monitored by a script. Pressing the but
 
 ## Hardware
 * 1 - Staples Easy Button
+* 1 - 3D Printed EasyButtonPiZero base
 * 1 - RaspberryPi Zero W, microSD card, and power supply
 * 1 - 6x6x4.3 tactile button
 * 2 - 3/8" x 1/10" [rare earth magnets](https://www.rockler.com/rare-earth-magnets-magnets?gclid=CjwKCAjw7uPqBRBlEiwAYDsr113YIHM8D4hktJRxECwKZXEZRNt4ctl47OzL8jG72H5bVa0vkqjzuxoC0qcQAvD_BwE) and matching magnet washers to attach base
+* E6000 adhesive (for magnets and attaching the button wedge)
 
-Version 2:
+**Version 2: Adds power button and status LED**
 
 * 1 red LED
 * 1 330 ohm resistor
 * 1 6x6x8 tactile button
 
-* E6000 adhesive (for magnets and attaching the button wedge)
+- Activation button wired to GPIO1 and ground (pins 28 and 30)
+- Reset button wired to pins 5 and 6
+- LED wired to pin 8(postive/anode) and pin 14 (negative/cathode)
+
 
 ## Setup
 
