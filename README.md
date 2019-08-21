@@ -6,15 +6,14 @@ The idea for this project was to create a simple way for my mom, who suffers fro
 
 The button is attached to a GPIO pin and monitored by a script. Pressing the button triggers an email to be sent to the email-to-SMS service provided by the phone carrier.
 
-[EasyButtonPiZero](https://www.thingiverse.com/thing:3815784)
+[EasyButtonPiZero](https://www.thingiverse.com/thing:3815784) on Thingiverse
 
 
 Hardware
 1 - Staples Easy Button
 1 - RaspberryPi Zero W, microSD card, and power supply
 1 - 6x6x4.3 tactile button
-2 - 3/8" x 1/10" rare earth magnets (and matching magnet washers) to attach base
-https://www.rockler.com/rare-earth-magnets-magnets?gclid=CjwKCAjw7uPqBRBlEiwAYDsr113YIHM8D4hktJRxECwKZXEZRNt4ctl47OzL8jG72H5bVa0vkqjzuxoC0qcQAvD_BwE
+2 - 3/8" x 1/10" [rare earth magnets](https://www.rockler.com/rare-earth-magnets-magnets?gclid=CjwKCAjw7uPqBRBlEiwAYDsr113YIHM8D4hktJRxECwKZXEZRNt4ctl47OzL8jG72H5bVa0vkqjzuxoC0qcQAvD_BwE) and matching magnet washers to attach base
 
 Version 2:
 1 red LED
@@ -26,6 +25,7 @@ E6000 adhesive (for magnets and attaching the button wedge)
 Setup
 
 1) Configure NTP 
+
 [Enable NTP client](http://raspberrypi.tomasgreno.cz/ntp-client-and-server.html)
 ```
 sudo apt-get install ntp
@@ -46,6 +46,7 @@ sudo /etc/init.d/ntp start
 ```
 
 2) Enable UART for status LED (optional)
+
 Add line to /boot/config.txt
 ```
 sudo nano /boot/config.txt
@@ -73,7 +74,9 @@ nano easy.py
 ```
 
 6) Make scripts start on boot
+
 [Add Power Button](https://howchoo.com/g/mwnlytk3zmm/how-to-add-a-power-button-to-your-raspberry-pi)
+
 [Run Program at boot](https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/)
 ```
 cd /home/pi/dev/easybuttonpizero
