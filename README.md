@@ -9,6 +9,20 @@ The button is attached to a GPIO pin and monitored by a script. Pressing the but
 https://www.thingiverse.com/thing:3815784
 
 
+Hardware
+1 - Staples Easy Button
+1 - RaspberryPi Zero W, microSD card, and power supply
+1 - 6x6x4.3 tactile button
+2 - 3/8" x 1/10" rare earth magnets (and matching magnet washers) to attach base
+https://www.rockler.com/rare-earth-magnets-magnets?gclid=CjwKCAjw7uPqBRBlEiwAYDsr113YIHM8D4hktJRxECwKZXEZRNt4ctl47OzL8jG72H5bVa0vkqjzuxoC0qcQAvD_BwE
+
+Version 2:
+1 red LED
+1 330 ohm resistor
+1 6x6x8 tactile button
+
+E6000 adhesive (for magnets and attaching the button wedge)
+
 Setup
 
 1) Configure NTP 
