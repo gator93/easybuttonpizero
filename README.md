@@ -30,7 +30,7 @@ The button is attached to a GPIO pin and monitored by a script. Pressing the but
 
 ## Setup
 
-1) Configure NTP 
+1) Configure NTP and set timezone
 
 ```
 sudo apt-get install ntp
@@ -47,6 +47,8 @@ sudo systemctl stop systemd-timesyncd
 sudo systemctl disable systemd-timesyncd
 sudo /etc/init.d/ntp stop
 sudo /etc/init.d/ntp start
+
+sudo raspi-config
 ```
 Source: [Enable NTP client](http://raspberrypi.tomasgreno.cz/ntp-client-and-server.html)
 
