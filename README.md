@@ -27,11 +27,9 @@ Version 2:
 
 1) Configure NTP 
 
-[Enable NTP client](http://raspberrypi.tomasgreno.cz/ntp-client-and-server.html)
 ```
 sudo apt-get install ntp
 ```
-
 Add servers to /etc/ntp.conf
 ```
 sudo nano /etc/ntp.conf
@@ -45,6 +43,7 @@ sudo systemctl disable systemd-timesyncd
 sudo /etc/init.d/ntp stop
 sudo /etc/init.d/ntp start
 ```
+Source: [Enable NTP client](http://raspberrypi.tomasgreno.cz/ntp-client-and-server.html)
 
 2) Enable UART for status LED (optional)
 
@@ -76,9 +75,6 @@ nano easy.py
 
 6) Make scripts start on boot
 
-[Add Power Button](https://howchoo.com/g/mwnlytk3zmm/how-to-add-a-power-button-to-your-raspberry-pi)
-
-[Run Program at boot](https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/)
 ```
 cd /home/pi/dev/easybuttonpizero
 sudo cp listen-for-shutdown.py /usr/local/bin/
@@ -88,6 +84,9 @@ sudo chmod +x /etc/init.d/listen-for-shutdown.sh
 sudo update-rc.d listen-for-shutdown.sh defaults
 sudo /etc/init.d/listen-for-shutdown.sh start
 ```
+Source: [Add Power Button](https://howchoo.com/g/mwnlytk3zmm/how-to-add-a-power-button-to-your-raspberry-pi)
+
+Source: [Run Program at boot](https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/)
 
 7) Reboot
 ```
