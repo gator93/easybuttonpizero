@@ -46,6 +46,8 @@ def SendTxtMsg():
    # Establish a secure session with gmail's outgoing SMTP server using your gmail account
    server = smtplib.SMTP( "smtp.gmail.com", 587 )
    server.starttls()
+   
+   # Using your google account, generate an app password to use here
    server.login( 'user@domain.com', 'password' )
    server.sendmail(fromStr, toStr, messageStr)
    server.quit
