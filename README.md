@@ -6,12 +6,12 @@ The idea for this project was to create a simple way for my mom, who suffers fro
 
 The button is attached to a GPIO pin and monitored by a script. Pressing the button triggers an email to be sent to the email-to-SMS service provided by the phone carrier.
 
-[EasyButtonPiZero](https://www.thingiverse.com/thing:3815784) on Thingiverse
+[EasyButtonPiZeroBase](https://www.thingiverse.com/thing:3815784) on Thingiverse
 
 
 ## Hardware
 * 1 - Staples Easy Button
-* 1 - 3D Printed EasyButtonPiZero base
+* 1 - 3D Printed EasyButtonPiZeroBase
 * 1 - RaspberryPi Zero W, microSD card, and power supply
 * 1 - 6x6x4.3 tactile button
 * 2 - 3/8" x 1/10" [rare earth magnets](https://www.rockler.com/rare-earth-magnets-magnets?gclid=CjwKCAjw7uPqBRBlEiwAYDsr113YIHM8D4hktJRxECwKZXEZRNt4ctl47OzL8jG72H5bVa0vkqjzuxoC0qcQAvD_BwE) and matching magnet washers to attach base
