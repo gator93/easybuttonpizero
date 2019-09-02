@@ -7,6 +7,9 @@ import datetime
 import smtplib
 import logging
 import platform
+import ConfigParser
+from subprocess import call
+
 
 # Set level=logging.DEBUG for all logs. Else set ERROR.
 logging.basicConfig(filename='/home/pi/easy/button.log',level=logging.DEBUG, format='%(asctime)s %(message)s')
@@ -22,6 +25,14 @@ lastButtonTime = 0
 buttonDelay = 1500
 pressed = 0
 
+def playNotify():
+   config = ConfigParser.ConfigParser()
+   config.read('/home/pi/easy/easybutton.cfg')
+   notify = config.get ('defaults', 'notify')
+
+   if os.path.isfile(notify):   
+      call(["aplay", "-D", "bluealsa", notify])
+
 
 # ---------------------------------------------------------
 # Sends SMS message to any cell phone using gmail smtp gateway
@@ -32,8 +43,12 @@ pressed = 0
 #    Sprint:   phonenumber@page.nextel.com
 # ---------------------------------------------------------
 def SendTxtMsg():
-   fromStr = 'example@me.com'
-   toStr = '1234567890@mms.att.net'
+
+   config = ConfigParser.ConfigParser()
+   config.read('/home/pi/easy/easybutton.cfg')
+
+   fromStr = config.get('defaults', 'from')
+   toStr = config.get('defaults', 'to')
    subjectStr = 'ButtonPushed'
    bodyStr = datetime.datetime.now().strftime("%A %B %d %I:%M %p")
 
@@ -48,7 +63,7 @@ def SendTxtMsg():
    server.starttls()
    
    # Using your google account, generate an app password to use here
-   server.login( 'user@domain.com', 'password' )
+   server.login( config.get('defaults', 'user'), config.get('defaults','pw') )
    server.sendmail(fromStr, toStr, messageStr)
    server.quit
    logging.info('Button pressed: %s', bodyStr)
@@ -85,6 +100,8 @@ while os.path.isfile("/home/pi/easy/stop") is not True:
    if (pressed):
        pressed = 0
        SendTxtMsg()
+#       playNotify()
+
         
    time.sleep(0.2)
 

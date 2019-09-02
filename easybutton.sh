@@ -1,7 +1,7 @@
 #! /bin/sh
 
 ### BEGIN INIT INFO
-# Provides:          easy.py
+# Provides:          easybutton.py
 # Required-Start:    $remote_fs $syslog $network $named
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
@@ -13,11 +13,11 @@
 # Carry out specific functions when asked to by the system
 case "$1" in
   start)
-    echo "Starting easy.py"
-    /home/pi/easy/easy.py &
+    echo "Starting easybutton.py"
+    /home/pi/easy/easybutton.py &
     ;;
   stop)
-    echo "Stopping easy.py"
+    echo "Stopping easybutton.py"
     touch /home/pi/easy/stop
     ;;
   *)
