@@ -74,9 +74,6 @@ git clone https://github.com/gator93/easybuttonpizero
 
 5) Add email and phone credentials to easybutton.cfg
 ```
-cp /home/pi/dev/easybuttonpizero/easybutton.py /home/pi/easy
-cd /home/pi/easy
-sudo chmod +x easybutton.py
 nano easybutton.cfg
 ```
 
@@ -84,12 +81,17 @@ nano easybutton.cfg
 
 ```
 cd /home/pi/dev/easybuttonpizero
+cp easybutton.py /home/pi/easy
+cd /home/pi/easy
+sudo chmod +x easybutton.py
+
 sudo cp listen-for-shutdown.py /usr/local/bin/
 sudo chmod +x /usr/local/bin/listen-for-shutdown.py
 sudo cp listen-for-shutdown.sh /etc/init.d
 sudo chmod +x /etc/init.d/listen-for-shutdown.sh
 sudo update-rc.d listen-for-shutdown.sh defaults
 sudo /etc/init.d/listen-for-shutdown.sh start
+
 sudo cp easybutton.sh /etc/init.d
 sudo chmod +x /etc/init.d/easybutton.sh
 sudo update-rc.d easybutton.sh defaults
