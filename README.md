@@ -74,7 +74,8 @@ git clone https://github.com/gator93/easybuttonpizero
 
 5) Add email and phone credentials to easybutton.cfg
 ```
-nano easybutton.cfg
+cp easybutton.cfg /home/pi/easy
+nano /home/pi/easy/easybutton.cfg
 ```
 
 6) Make scripts start on boot
