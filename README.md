@@ -90,6 +90,10 @@ sudo cp listen-for-shutdown.sh /etc/init.d
 sudo chmod +x /etc/init.d/listen-for-shutdown.sh
 sudo update-rc.d listen-for-shutdown.sh defaults
 sudo /etc/init.d/listen-for-shutdown.sh start
+sudo cp easybutton.sh /etc/init.d
+sudo chmod +x /etc/init.d/easybutton.sh
+sudo update-rc.d easybutton.sh defaults
+sudo /etc/init.d/easybutton.sh start
 ```
 Source: [Add Power Button](https://howchoo.com/g/mwnlytk3zmm/how-to-add-a-power-button-to-your-raspberry-pi)
 
