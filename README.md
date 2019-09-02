@@ -72,12 +72,12 @@ cd /home/pi/dev/
 git clone https://github.com/gator93/easybuttonpizero
 ```
 
-5) Add email and phone credentials to easy.py
+5) Add email and phone credentials to easybutton.cfg
 ```
-cp /home/pi/dev/easybuttonpizero/easy.py /home/pi/easy
+cp /home/pi/dev/easybuttonpizero/easybutton.py /home/pi/easy
 cd /home/pi/easy
-sudo chmod +x easy.py
-nano easy.py
+sudo chmod +x easybutton.py
+nano easybutton.cfg
 ```
 
 6) Make scripts start on boot
