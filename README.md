@@ -108,3 +108,17 @@ Source: [Run Program at boot](https://www.dexterindustries.com/howto/run-a-progr
 ```
 sudo reboot now
 ```
+
+Notes:
+Sample wpa_supplicant.conf for setting up wifi
+```
+country=us
+update_config=1
+ctrl_interface=/var/run/wpa_supplicant
+
+network={
+ scan_ssid=1
+ ssid="MyNetworkSSID"
+ psk="Pa55w0rd1234"
+}
+```
