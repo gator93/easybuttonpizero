@@ -98,9 +98,9 @@ Reset()
 
 while os.path.isfile("/home/pi/easy/stop") is not True:
    if (pressed):
-       pressed = 0
        SendTxtMsg()
-#       playNotify()
+       playNotify()
+       pressed = 0
 
         
    time.sleep(0.2)
