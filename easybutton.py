@@ -26,10 +26,10 @@ buttonDelay = 1500
 pressed = 0
 
 def connectBTSpeaker():
-   call(["/home/pi/easy/alexacon.sh"])
+   call(["/home/pi/easy/btcon.sh"])
 
 def disconnectBTSpeaker():
-   call(["/home/pi/easy/alexadisc.sh"])
+   call(["/home/pi/easy/btdisc.sh"])
 
 def playNotify():
    config = ConfigParser.ConfigParser()
