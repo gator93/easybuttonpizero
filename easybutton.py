@@ -25,6 +25,12 @@ lastButtonTime = 0
 buttonDelay = 1500
 pressed = 0
 
+def connectBTSpeaker():
+   call(["/home/pi/easy/alexacon.sh"])
+
+def disconnectBTSpeaker():
+   call(["/home/pi/easy/alexadisc.sh"])
+
 def playNotify():
    config = ConfigParser.ConfigParser()
    config.read('/home/pi/easy/easybutton.cfg')
@@ -96,6 +102,8 @@ GPIO.add_event_detect(1, GPIO.BOTH, callback=ButtonHandler)
 
 Reset()
 
+connectBTSpeaker()
+
 while os.path.isfile("/home/pi/easy/stop") is not True:
    if (pressed):
        SendTxtMsg()
@@ -105,6 +113,7 @@ while os.path.isfile("/home/pi/easy/stop") is not True:
         
    time.sleep(0.2)
 
+disconnectBTSpeaker()
 logging.info('EasyButton stopping...\n') 
 Reset()
 GPIO.cleanup()
