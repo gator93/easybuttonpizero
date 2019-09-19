@@ -9,6 +9,7 @@
 ### END INIT INFO
 
 # If you want a command to always run, put it here
+DAEMON_USER=pi
 
 # Carry out specific functions when asked to by the system
 case "$1" in
